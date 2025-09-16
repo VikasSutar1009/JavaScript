@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Arrays Example</title>
+
+</head>
+<body>
+    <h2>JavaScript Arrays</h2>
+
+    <p id="array1"></p>
+    <p id="array2"></p>
+    <p id="array3"></p>
+    <p id="array4"></p>   
+    
+    <script>
+    // Creating an array
+    let fruits =["Apple","Banana", "Mango", "Orange"];
+
+    // Accessing array elements
+    document.getElementById("array1").innerText = "First fruit:" + fruits[0];
+
+    // Adding new element
+    fruits.push("Grapes");
+    document.getElementById("array2").innerText = "After push:" + fruits;
+
+    // Removing last element
+    fruits.pop();
+    document.getElementById("array3").innerText = "After pop:" + fruits;
+
+    // looping through array
+    let list = "";
+    for (let i =0; i< fruits.length; i++){
+        list += fruits[i] + " ";
+    }
+    document.getElementById("array4").innerText = "All fruits: " + list;
+    </script>
+</body>
+</html>
