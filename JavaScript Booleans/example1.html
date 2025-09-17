@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Booleans Example</title>
+</head>
+<body>
+  <h2>JavaScript Booleans</h2>
+
+  <p id="bool1"></p>
+  <p id="bool2"></p>
+  <p id="bool3"></p>
+  <p id="bool4"></p>
+  <p id="bool5"></p>
+  <p id="bool6"></p>
+
+  <script>
+    // Simple true/false values
+    let isStudent = true;
+    let isTeacher = false;
+    document.getElementById("bool1").innerText = "isStudent = " + isStudent + ", isTeacher = " + isTeacher;
+
+    // Comparison operators return Booleans
+    let x = 10;
+    let y = 20;
+    document.getElementById("bool2").innerText = "x < y : " + (x < y);
+    document.getElementById("bool3").innerText = "x == y : " + (x == y);
+
+    // Strict equality (===) checks type + value
+    let num = 5;
+    let str = "5";
+    document.getElementById("bool4").innerText = "num == str : " + (num == str) + 
+                                                 " | num === str : " + (num === str);
+
+    // Boolean function to convert values
+    document.getElementById("bool5").innerText = "Boolean(0): " + Boolean(0) + 
+                                                 ", Boolean(1): " + Boolean(1) +
+                                                 ", Boolean('Hello'): " + Boolean("Hello") +
+                                                 ", Boolean(''): " + Boolean("");
+
+    // Logical operators
+    let age = 18;
+    let hasID = true;
+    let canEnter = (age >= 18 && hasID);
+    document.getElementById("bool6").innerText = "Can enter? " + canEnter;
+  </script>
+</body>
+</html>
