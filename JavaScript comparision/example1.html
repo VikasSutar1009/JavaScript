@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Comparison Example</title>
+</head>
+<body>
+    <h2>JavaScript Comparison operators</h2>
+
+    <p id="comp1"></p>
+    <p id="comp2"></p>
+    <p id="comp3"></p>
+    <p id="comp4"></p>
+    <p id="comp5"></p>
+    <p id="comp6"></p>
+    <p id="comp7"></p>
+    <p id="comp8"></p>
+
+    <script>
+        let a = 10;
+        let b = 20;
+        let c = "10";
+
+        // Equal (==) → compares only values
+        document.getElementById("comp1").innerText = "a == c : " + (a == c);
+
+        // Strict Equal (===) → compares values + types
+        document.getElementById("comp2").innerText = "a === c : " + (a === c);
+
+        // Not Equal (!=)
+        document.getElementById("comp3").innerText = "a != b : " + (a != b);
+
+        // Strict Not Equal (!==)
+        document.getElementById("comp4").innerText = "a !== c : " + (a !== c);
+
+        // Greater than / Less than
+        document.getElementById("comp5").innerText = "a > b : " + (a > b) + ", a < b : " + (a < b);
+
+        // Greater than or Equal / Less than or Equal
+        document.getElementById("comp6").innerText = "a >= 10 : " + (a >= 10) + ", b <= 20 : " + (b <= 20);
+
+        // Comparing strings (lexical order)
+        let str1 = "apple";
+        let str2 = "banana";
+        document.getElementById("comp7").innerText = `"${str1}" < "${str2}" : ` + (str1 < str2);
+
+        // Using comparison in condition
+        let age = 18;
+        let canVote = (age >= 18);
+        document.getElementById("comp8").innerText = "Can vote? " + canVote;
+    </script>
+</body>
+</html>
