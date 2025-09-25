@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onkeydown Example</title>
+    <script>
+        function keyDownHandler(event) {
+            document.getElementById("output").innerText="key pressed:" + event.key;
+        }
+    </script>
+</head>
+<body>
+    <h2>onkeydown event example</h2>
+    <input type="text" onkeydown="keyDownHandler(event)" placeholder="type something....">
+    <p id="output"></p>
+
+</body>
+</html>

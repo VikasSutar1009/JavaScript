@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmouseout Example</title>
+    <script>
+        function mouseOutHandler(element) {
+            element.style.backgroundColor="lightblue";
+        }
+        function mouseOverHandler(element) {
+            element.style.backgroundColor="yellow";
+        }
+    </script>
+</head>
+<body>
+     <h2>onmouseover Event Example</h2>
+    <div style="width: 200px; height: 50px; background-color: lightblue;
+    text-align: center; line-height: 50px; cursor: pointer;"
+    onmouseover="mouseOverHandler(this)" onmouseout="mouseOutHandler(this)"> hover Over me</div>
+</body>
+</html>
