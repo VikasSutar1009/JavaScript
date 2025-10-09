@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const passowrd = document.getElementById("passowrd").value;
+
+            // manually set credentials
+            const correctUser = "admin";
+            const correctPass = "12345";
+
+            if (username === correctUser && passowrd === correctPass){
+                alert("Login successful!");
+                window.location.href="Welcome.html";  //redirect to welcome page
+            } else{
+                alert("Invalid username or password!");
+            
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h2>login page</h2>
+    <label>username:</label>
+    <input type="text" id="username"><br><br>
+
+
+    <label>Passowrd:</label>
+    <input type="password" id="passowrd"><br><br>
+
+    <button onclick="login()">Login Now</button>
+
+</body>
+</html>
