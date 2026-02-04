@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promise Popup Example</title>
+  <style>
+    *{
+        text-align: center;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: steelblue;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="colorBtn">Change My Color</button>
+
+  <script>
+    const button = document.getElementById("colorBtn");
+
+    function askAndChangeColor() {
+      return new Promise((resolve, reject) => {
+        const userChoice = confirm("Do you want to change the button color?");
+
+        if (userChoice) {
+          button.style.backgroundColor = "green";
+          resolve("User agreed, Color changed");
+        } else {
+          reject("User cancelledc, Color not changed");
+        }
+      });
+    }
+
+    button.addEventListener("click", () => {
+      askAndChangeColor()
+        .then(message => {
+          alert(message);
+        })
+        .catch(error => {
+          alert(error);
+        });
+    });
+  </script>
+
+</body>
+</html>

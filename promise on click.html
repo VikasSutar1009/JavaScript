@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Button Example</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: rgb(193, 193, 235);
+            color: white;
+            border-radius: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Change The Buttoncolor</h2>
+    <button id="myBtn">Click Me</button>
+
+    <script>
+        const button = document.getElementById("myBtn");
+
+        function changeButtonColor() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    button.style.backgroundColor = "orange";
+                    resolve("Button color changed to green");
+                }, 2000);
+            });
+        }
+
+        button.addEventListener("click", () => {
+            changeButtonColor()
+                .then(message => {
+                    console.log(message);
+                });
+        });
+    </script>
+</body>
+
+</html>
